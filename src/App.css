@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+  --primary: rgb(168,167,167);
+  --secondary: rgb(255,69,50);
+  --tertiary: rgb(30, 215, 96);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.green {
+
+  color: var(--tertiary)
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-display {
+
+  width: 100%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu {
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  font-size: calc(0.5px + 2vmin);
+
+  gap: 50px;
+
+}
+
+.Main-Page {
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+
+  width: 100%;
+
+}
+
+.Display {
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  padding-left: 10px;
+
+  width: 80%;
+
+  /* border: 1px solid rgba(51, 51, 151, 0.7); */
+
+  border-left: 1px solid rgba(30, 215, 96, 0.5);;
+
+}
+
+.App {
+
+  font-family: 'Poppins', sans-serif;
+  
+  box-sizing: border-box;
+
+  text-align: center;
+  background-color: rgb(22,22,22);
+
+  min-height: 100vh;
+  
+  gap: 10px;
+  margin: 0;
+
+  padding-top: 5vh;
+
+  padding-left: 20vw;
+  padding-right: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.MenuBar {
+
+  display: flex;
+  /* flex-direction: row; */
+
+  width: 100%;
+  
+  margin-bottom: 50px;
+  gap: 10px;
+
+  color:  var(--secondary);
+
+  align-items: flex-end;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header {
+
+  display: flex;
+  flex-direction: column;
+
+  color:  var(--primary);
+
+  align-items: flex-start;
+  gap: 0;
+
 }
+
+.Content {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+
+  width: 100%;
+
+  color:  var(--primary);
+
+  padding: 0;
+
+  /* border: 1px solid var(--primary); */
+
+}
+
+.link {
+
+  transition: ease-in 0.3s;
+
+}
+
+.selected-display {
+
+  color: var(--tertiary);
+  text-decoration: underline;
+
+}
+
+.link:hover {
+
+  color: var(--tertiary);
+  cursor: pointer;
+}
+
+h1 {
+
+  color: var(--secondary);
+  margin: 0;
+
+}
+
+h2, h3 {
+
+  margin: 0;
+
+}
+
+p {
+
+  margin: 0;
+
+  font-size: calc(3px + 2vmin);
+
+}
+
