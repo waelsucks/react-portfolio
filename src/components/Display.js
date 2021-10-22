@@ -1,11 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
 function Display({ selectedDisplay }) {
-
-    const [menuSelected, setMenuSelected] = useState(null)
 
     return (
         <div className = "Display">

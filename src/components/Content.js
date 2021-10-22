@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 function Content() {
 
     // const spotifyFollowers = useSpotifyArtist('1c900ggAc3AokqNCxPm2LQ');
