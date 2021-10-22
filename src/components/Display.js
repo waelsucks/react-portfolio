@@ -29,7 +29,9 @@ function Display({ selectedDisplay }) {
 
                 <AnimatePresence>
                     {selectedDisplay && <motion.p
-                
+
+                        drag
+
                         style={{
                             display:"inline"
                         }}

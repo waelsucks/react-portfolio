@@ -19,9 +19,9 @@ function App() {
 
             <motion.div className="Main-Page"
             
-                initial = {{opacity: 0}}
-                animate = {{opacity: 1}}
-                transition = {{duration: 8, ease: "anticipate"}}
+                initial = {{opacity: 0, x: -10}}
+                animate = {{opacity: 1, x: 0}}
+                transition = {{duration: 5, ease: "anticipate"}}
             
             >
                 <div className="left-display">
@@ -35,7 +35,7 @@ function App() {
 
             </motion.div>
 
-            <motion.div className="helloScreen"
+            {/* <motion.div className="helloScreen"
                 
                     initial = {{opacity: 0}}
                     animate = {{opacity: 1}}
@@ -45,7 +45,7 @@ function App() {
                     <p>
                         hello.
                     </p>
-                </motion.div>
+            </motion.div> */}
 
         </div>
     );

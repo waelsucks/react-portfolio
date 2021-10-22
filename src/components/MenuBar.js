@@ -18,7 +18,7 @@ function MenuBar({ setSelectedDisplay }) {
         show: {
           opacity: 1,
           transition: {
-            delayChildren: 3,
+            delayChildren: 0,
             staggerChildren: 0.15
           }
         }
