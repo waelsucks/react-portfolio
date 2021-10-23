@@ -1,63 +1,65 @@
-import React from 'react'
-
 import { motion, AnimatePresence } from 'framer-motion'
+import Experience from './pages/Experience'
 
 function Display({ selectedDisplay }) {
 
     return (
-        <div className = "Display">
             
-            <div className="Content">
-                
-                <h2>
-                    This is were the different displays will go.
-                </h2>
+        <div className="Content">
 
-                <br />
+            <AnimatePresence
+                exitBeforeEnter
+            >
+                {selectedDisplay}
+            </AnimatePresence>
+            
+            {/* <h2>
+                This is were the different displays will go.
+            </h2>
 
-                <p>
-                    Selecting an option from the menu will change the display in here.
-                </p>
+            <br />
 
-                <br />
+            <p>
+                Selecting an option from the menu will change the display in here.
+            </p>
 
-                <p>
-                    Try it! Select an item from the menu :)
-                </p>
+            <br />
 
-                <br />
+            <p>
+                Try it! Select an item from the menu :)
+            </p>
 
-                <AnimatePresence>
-                    {selectedDisplay && <motion.p
+            <br />
 
-                        drag
+            <AnimatePresence>
+                {selectedDisplay && <motion.p
 
-                        style={{
-                            display:"inline"
-                        }}
+                    drag
 
-                        initial = {{opacity: 0}}
-                        animate = {{opacity: 1}}
-                        exit    = {{opacity: 0}}
-                    >
-                        You've selected:&nbsp;
+                    style={{
+                        display:"inline"
+                    }}
 
-                        <AnimatePresence exitBeforeEnter>
-                        <motion.div
+                    initial = {{opacity: 0}}
+                    animate = {{opacity: 1}}
+                    exit    = {{opacity: 0}}
+                >
+                    You've selected:&nbsp;
 
-                        key = { selectedDisplay }
-                        
-                        initial = {{opacity: 0}}
-                        animate = {{opacity: 1}}
-                        exit    = {{opacity: 0}}
+                    <AnimatePresence exitBeforeEnter>
+                    <motion.div
 
-                        className="selected-display" style={{display:"inline"}}>{ selectedDisplay }</motion.div>
-                        </AnimatePresence>
+                    key = { selectedDisplay }
+                    
+                    initial = {{opacity: 0}}
+                    animate = {{opacity: 1}}
+                    exit    = {{opacity: 0}}
 
-                        </motion.p>}
-                </AnimatePresence>
+                    className="selected-display" style={{display:"inline"}}>{ selectedDisplay }</motion.div>
+                    </AnimatePresence>
 
-            </div>
+                    </motion.p>}
+            </AnimatePresence> */}
 
         </div>
     )

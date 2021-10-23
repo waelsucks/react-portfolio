@@ -7,6 +7,7 @@ import Display from './components/Display';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
@@ -24,14 +25,52 @@ function App() {
                 transition = {{duration: 5, ease: "anticipate"}}
             
             >
-                <div className="left-display">
+
+                <AnimatePresence
                 
-                    <Header></Header>       <br /> <br />
-                    <Content></Content>
+                    exitBeforeEnter
+                
+                >
 
-                </div>
+                    {!selectedDisplay && <motion.div className="left-display"
+                    
+                    initial = {{opacity: 0, x: -10}}
+                    animate = {{opacity: 1, x: 0}}
+                    exit    = {{opacity: 0}}
 
-                <Display selectedDisplay={selectedDisplay}></Display>
+                    transition = {{
+                        // duration: 1,
+                        type: "spring"
+                    }}
+                    
+                    key = "left"
+
+                >
+                
+                        <Header></Header>       <br /> <br />
+                        <Content></Content>
+
+                    </motion.div>}
+
+                    {selectedDisplay && <motion.div className="right-display"
+                    
+                        initial = {{opacity: 0, x: "+5vw"}}
+                        animate = {{opacity: 1, x: 0}}
+                        exit    = {{opacity: 0, x: "+5vw"}}
+
+                        transition = {{
+                            duration: 0.5
+                        }}
+                        
+                        key = "right"
+
+                    >
+                    
+                        <Display selectedDisplay={selectedDisplay}></Display>
+
+                    </motion.div>}
+                </AnimatePresence>
+                
 
             </motion.div>
 

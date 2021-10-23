@@ -7,6 +7,9 @@ import InstagramIcon    from '@mui/icons-material/Instagram';
 import FacebookIcon     from '@mui/icons-material/Facebook';
 import GitHubIcon       from '@mui/icons-material/GitHub';
 
+import Experience from './pages/Experience';
+import Contact from './pages/Contact';
+
 function MenuBar({ setSelectedDisplay }) {
 
     const instagramLink = "https://www.instagram.com/_waelbm"
@@ -59,32 +62,30 @@ function MenuBar({ setSelectedDisplay }) {
             <div className="Menu">
 
                 <motion.div className="link" variants = {item}>
-                    <Link color ="inherit" onClick={() => setSelectedDisplay("Home.")} underline="none">
+                    <Link color ="inherit" onClick={() => setSelectedDisplay(false)} underline="none">
                        Home.
                     </Link>
                 </motion.div>
 
                 <motion.div className="link" variants = {item}>
-                    <Link color ="inherit" onClick={() => setSelectedDisplay("Experience.")} underline="none">
+                    <Link color ="inherit" onClick={() => setSelectedDisplay(Experience)} underline="none">
                         Experience.
                     </Link>
                 </motion.div>
 
                 <motion.div className="link" variants = {item}>
-                    <Link color ="inherit" onClick={() => setSelectedDisplay("Contact.")} underline="none">
+                    <Link color ="inherit" onClick={() => setSelectedDisplay(Contact)} underline="none">
                         Contact.
                     </Link>
                 </motion.div>
 
                 <motion.div className="link" variants = {item}>
-                    <p 
+                    <p
                         
                         style = {{
                             fontSize: "small",
                             userSelect: "none"
                         }}
-
-                        onClick={ () => setSelectedDisplay(null) }
                     
                     >
                         (work in progress...)
