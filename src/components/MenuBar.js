@@ -6,6 +6,7 @@ import { Link } from '@mui/material';
 import InstagramIcon    from '@mui/icons-material/Instagram';
 import FacebookIcon     from '@mui/icons-material/Facebook';
 import GitHubIcon       from '@mui/icons-material/GitHub';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
@@ -15,6 +16,7 @@ function MenuBar({ setSelectedDisplay }) {
     const instagramLink = "https://www.instagram.com/_waelbm"
     const facebookLink  = "https://www.facebook.com/himynameiswael"
     const githubLink    = "https://github.com/waelsucks"
+    const spotifyLink   = "https://open.spotify.com/artist/1c900ggAc3AokqNCxPm2LQ?si=zzEGJ8ZXTWaf3Iihc8uv1w"
 
     const container = {
         hidden: { opacity: 0 },
@@ -56,6 +58,12 @@ function MenuBar({ setSelectedDisplay }) {
             <motion.div className="link" variants = {item}>
                 <Link color ="inherit" href={githubLink} target ="_blank">
                     <GitHubIcon></GitHubIcon>
+                </Link>
+            </motion.div>
+
+            <motion.div className="link" variants = {item}>
+                <Link color ="inherit" href={spotifyLink} target ="_blank">
+                <LibraryMusicIcon></LibraryMusicIcon>
                 </Link>
             </motion.div>
 

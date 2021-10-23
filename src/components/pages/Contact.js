@@ -31,7 +31,7 @@ function Contact() {
             <br />
 
             <h3>
-                Beep Boop.
+                beep boop.
             </h3>
 
         </motion.div>
