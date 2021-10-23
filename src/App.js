@@ -26,6 +26,7 @@ function App() {
             
             {!isMobile && <>
                 <MenuBar setSelectedDisplay = {setSelectedDisplay}></MenuBar>     <br /> <br /> <br />
+
                 <motion.div className="Main-Page"
 
                     initial = {{opacity: 0, x: -10}}
@@ -42,13 +43,12 @@ function App() {
 
                         {!selectedDisplay && <motion.div className="left-display"
                         
-                        initial = {{opacity: 0, x: -10}}
+                        initial = {{opacity: 0, x: ""}}
                         animate = {{opacity: 1, x: 0}}
-                        exit    = {{opacity: 0}}
+                        exit    = {{opacity: 0, x: ""}}
 
                         transition = {{
-                            // duration: 1,
-                            type: "spring"
+                            duration: 0.5
                         }}
                         
                         key = "left"
@@ -62,9 +62,9 @@ function App() {
 
                         {selectedDisplay && <motion.div className="right-display"
                         
-                            initial = {{opacity: 0, x: "+5vw"}}
+                            initial = {{opacity: 0, x: "+1vw"}}
                             animate = {{opacity: 1, x: 0}}
-                            exit    = {{opacity: 0, x: "+5vw"}}
+                            exit    = {{opacity: 0, x: "+1vw"}}
 
                             transition = {{
                                 duration: 0.5
