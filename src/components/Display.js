@@ -1,5 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion'
-import Experience from './pages/Experience'
+import { AnimatePresence } from 'framer-motion'
 
 function Display({ selectedDisplay }) {
 
