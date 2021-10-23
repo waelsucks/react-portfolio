@@ -11,80 +11,100 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-    const [selectedDisplay, setSelectedDisplay] = useState(null);
+    const [selectedDisplay  , setSelectedDisplay]   = useState(null);
+    
+    let isMobile = false;
+
+    if (window.screen.width >= 1280) {
+        isMobile = false
+    } else {
+        isMobile = true
+    }
 
     return (
         <div className="App">
             
-            <MenuBar setSelectedDisplay = {setSelectedDisplay}></MenuBar>     <br /> <br /> <br />
+            {!isMobile && <>
+                <MenuBar setSelectedDisplay = {setSelectedDisplay}></MenuBar>     <br /> <br /> <br />
+                <motion.div className="Main-Page"
 
-            <motion.div className="Main-Page"
-            
-                initial = {{opacity: 0, x: -10}}
-                animate = {{opacity: 1, x: 0}}
-                transition = {{duration: 5, ease: "anticipate"}}
-            
-            >
-
-                <AnimatePresence
-                
-                    exitBeforeEnter
-                
-                >
-
-                    {!selectedDisplay && <motion.div className="left-display"
-                    
                     initial = {{opacity: 0, x: -10}}
                     animate = {{opacity: 1, x: 0}}
-                    exit    = {{opacity: 0}}
-
-                    transition = {{
-                        // duration: 1,
-                        type: "spring"
-                    }}
-                    
-                    key = "left"
+                    transition = {{duration: 5, ease: "anticipate"}}
 
                 >
-                
-                        <Header></Header>       <br /> <br />
-                        <Content></Content>
 
-                    </motion.div>}
-
-                    {selectedDisplay && <motion.div className="right-display"
+                    <AnimatePresence
                     
-                        initial = {{opacity: 0, x: "+5vw"}}
+                        exitBeforeEnter
+                    
+                    >
+
+                        {!selectedDisplay && <motion.div className="left-display"
+                        
+                        initial = {{opacity: 0, x: -10}}
                         animate = {{opacity: 1, x: 0}}
-                        exit    = {{opacity: 0, x: "+5vw"}}
+                        exit    = {{opacity: 0}}
 
                         transition = {{
-                            duration: 0.5
+                            // duration: 1,
+                            type: "spring"
                         }}
                         
-                        key = "right"
+                        key = "left"
 
                     >
                     
-                        <Display selectedDisplay={selectedDisplay}></Display>
+                            <Header></Header>       <br /> <br />
+                            <Content></Content>
 
-                    </motion.div>}
-                </AnimatePresence>
-                
+                        </motion.div>}
 
-            </motion.div>
+                        {selectedDisplay && <motion.div className="right-display"
+                        
+                            initial = {{opacity: 0, x: "+5vw"}}
+                            animate = {{opacity: 1, x: 0}}
+                            exit    = {{opacity: 0, x: "+5vw"}}
 
-            {/* <motion.div className="helloScreen"
-                
-                    initial = {{opacity: 0}}
-                    animate = {{opacity: 1}}
-                    transition = {{duration: 1.3, repeat: 1 ,repeatType: "reverse", ease: "anticipate"}}
-                
-                >
-                    <p>
-                        hello.
-                    </p>
-            </motion.div> */}
+                            transition = {{
+                                duration: 0.5
+                            }}
+                            
+                            key = "right"
+
+                        >
+                        
+                            <Display selectedDisplay={selectedDisplay}></Display>
+
+                        </motion.div>}
+                    </AnimatePresence>
+                </motion.div>
+            </>}
+
+            {isMobile && <div
+            
+                style = {{
+                    textAlign: "left"
+                }}
+            
+            >
+            
+                <div className="Content">
+                    <h1>
+                        Hello!
+                    </h1>
+
+                    <h2>
+                        Unfortunately, this site isn't available for mobile.
+                    </h2>
+                    <br />
+                    <br />
+
+                    yet.
+                    
+                </div>
+            
+            </div>}
 
         </div>
     );
