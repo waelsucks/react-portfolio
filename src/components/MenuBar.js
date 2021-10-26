@@ -8,8 +8,8 @@ import FacebookIcon     from '@mui/icons-material/Facebook';
 import GitHubIcon       from '@mui/icons-material/GitHub';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 
-import Experience from './pages/Experience';
-import Contact from './pages/Contact';
+import Experience from './Experience';
+import Contact from './Contact';
 
 function MenuBar({ setSelectedDisplay }) {
 

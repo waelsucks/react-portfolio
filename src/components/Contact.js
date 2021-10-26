@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
 function Contact() {
     return (
@@ -30,9 +31,24 @@ function Contact() {
 
             <br />
 
-            <h3>
-                beep boop.
-            </h3>
+            <p>
+                Am I taking too long to answer? <br />
+                Here's a representation of me you can drag around and shake <br />
+                while you wait :).
+            </p> <br />
+
+            <motion.div style={{width:30}} drag 
+            
+                dragConstraints={{
+                    top: -200,
+                    right: 800,
+                    left: -50,
+                    bottom: 0
+                }}
+            
+            >
+                <AccessibilityIcon sx={{fontSize: 100}} color="success"></AccessibilityIcon>
+            </motion.div>
 
         </motion.div>
     )
