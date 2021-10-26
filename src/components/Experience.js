@@ -2,31 +2,40 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
+import JobDisplay from './JobDisplay'
+
 function Experience() {
+
     return (
         <motion.div
-        
+
             initial = {{opacity: 0}}
             animate = {{opacity: 1}}
             exit    = {{opacity: 0}}
 
-            key = "Experience"
-        
+            key         = "Experience"
+            className   = "experience"
         >
             
-            <h1>
-                Experience
-            </h1>
+            <div>
+                <h1>
+                    Experience
+                </h1>
 
-            <p>
-                Here I will list my experiences and what not.
-            </p>
+                <p>
+                    I am currently studying and working part-time in Malmö. 
+                </p>
+                
+                <br />
+                <h3>
+                    Someday in the future, this page will be filled with fun stuff.
+                </h3>
 
-            <br />
+            </div>
 
-            <h3>
-                Maybe even put a chart or something.
-            </h3>
+            <div className="right-experience">
+                <JobDisplay></JobDisplay>
+            </div>
 
         </motion.div>
     )

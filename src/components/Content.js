@@ -23,7 +23,7 @@ function Content() {
                 
                 <p>
                     I am an engineering student currently studying              
-                    at Malmö University. You'll usually find me writing some    
+                    in Malmö. You'll usually find me writing some    
                     songs or working on one of my many projects.                
                 </p>
 

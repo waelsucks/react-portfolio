@@ -34,6 +34,29 @@
 
 }
 
+.job {
+
+  border-left: 1px solid var(--tertiary);
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  user-select: none;
+
+}
+
+
+.experience {
+
+  /* border: 1px solid var(--primary); */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+}
+
 .sidebar {
 
   border: 1px solid var(--secondary);

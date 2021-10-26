@@ -1,6 +1,15 @@
 import { AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 function Display({ selectedDisplay }) {
+
+    const [display, setDisplay] = useState(selectedDisplay)
+
+    useEffect(() => {
+        
+        setDisplay(selectedDisplay)
+
+    }, [selectedDisplay])
 
     return (
             
@@ -9,7 +18,7 @@ function Display({ selectedDisplay }) {
             <AnimatePresence
                 exitBeforeEnter
             >
-                {selectedDisplay}
+                {display}
             </AnimatePresence>
 
         </div>
