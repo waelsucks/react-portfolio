@@ -7,13 +7,16 @@ function Job({ job }) {
     return (
         <motion.div className="job" key={job}
         
-            initial     ={{opacity:0}}
-            animate     ={{opacity: 1}}
+            initial     ={{opacity:0, x: 10}}
+            animate     ={{opacity: 1, x: 0}}
             transition  ={{
-                opacity: {
-                    duration: 2,
+                default: {
+                    duration: 3,
                     ease: "anticipate",
-                    delay: 1
+                    delay: 0
+                },
+                scale: {
+                    duration: 0.2
                 }
             }}
 
