@@ -29,7 +29,7 @@ function App() {
 
                 <motion.div className="Main-Page"
 
-                    initial = {{opacity: 0, x: -10}}
+                    initial = {{opacity: 0, x: -100}}
                     animate = {{opacity: 1, x: 0}}
                     transition = {{duration: 5, ease: "anticipate"}}
 
